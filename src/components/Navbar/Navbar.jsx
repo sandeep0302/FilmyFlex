@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from 'react'
 import './Navbar.css'
-import logo from '../../assets/logo.png'
+import twitter_icon from '../../assets/twitter_icon.png'
 import search_icon from '../../assets/search_icon.svg'
 import bell_icon from '../../assets/bell_icon.svg'
 import profile_img from '../../assets/profile_img.png' 
 import caret_icon from '../../assets/caret_icon.svg'
 import { logout } from '../../firebase'
+import { CollectionReference } from 'firebase/firestore'
 
 const Navbar = () => {
 const navRef =useRef();
@@ -23,7 +24,12 @@ useEffect(()=>{
   return (
     <div ref={navRef} className='navbar'>
         <div className="navbar-left">
-          <img src={logo} alt="" />
+          <div className="fflogo" style={{
+            color:"red"
+           } }>
+           <h1>FilmyFlex</h1> 
+          </div>
+          {/*<img src={twitter_icon} alt="" />*/}
           <ul>
             <li>Home</li>
             <li>TV Shows</li>
@@ -41,7 +47,7 @@ useEffect(()=>{
            <img src={profile_img} alt="" className='profile' />
            <img src={caret_icon} alt="" />
            <div className="dropdown">
-            <p onClick={()=>{logout()}}>Sign Out of Netflix</p>
+            <p onClick={()=>{logout()}}>Sign Out of FilmyFlex</p>
            </div>
            </div>
         </div>

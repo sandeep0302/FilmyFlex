@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Login.css'
-import logo from '../../assets/logo.png'
+// import twitter_icon from '../../assets/twitter_icon.png'
 import { login,signup } from '../../firebase'
 import netflix_spinner from '../../assets/netflix_spinner.gif'
 
@@ -27,7 +27,9 @@ const Login = () => {
       <img src={netflix_spinner} alt="" />
     </div> :
     <div className='login'>
-      <img src={logo} className='login-logo' alt="" />
+    <div className="site-name">
+      <h1>FilmyFlex</h1></div>
+     {/* <img src={twitter_icon} className='login-logo' alt="" /> */}
       <div className="login-form">
         <h1>{signState}</h1>
         <form >
@@ -52,7 +54,7 @@ const Login = () => {
         </form>
         <div className="form-switch">
           {signState ==="Sign In" ?
-          <p>New to Netflix ? <span onClick={() =>{
+          <p>New to FilmyFlex ? <span onClick={() =>{
             setSignState("Sign Up")
           }}>Sign Up Now</span></p> :
           <p>Already have account ? <span onClick={() =>{
