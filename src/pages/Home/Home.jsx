@@ -16,6 +16,7 @@ const Home = () => {
           <img src={hero_banner} alt=""  className='banner-img'/>
           <div className="hero-caption">
            { /* <img src={hero_title} alt="" className='caption-img'/> */ }
+           <div><h1>The Protector</h1></div>
             <p>
               Discovering his ties to a secret ancient order,
               a young man living in modern Istanbul embarks on
